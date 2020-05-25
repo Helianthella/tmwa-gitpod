@@ -1,0 +1,8 @@
+core.manaplus*
+.legacy
+.local
+
+ohmyzsh.sh
+seppuku
+
+.gitpod-config

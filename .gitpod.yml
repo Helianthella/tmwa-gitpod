@@ -1,0 +1,29 @@
+image:
+  file: .gitpod.Dockerfile
+
+tasks:
+  - init: bash /workspace/tmwa-gitpod/scripts/init.sh
+    command: bash /workspace/tmwa-gitpod/scripts/start.sh && cd /workspace/tmwa-gitpod/.legacy && bash
+
+checkoutLocation: tmwa-gitpod
+workspaceLocation: tmwa-gitpod/tmwa-gitpod.theia-workspace
+
+ports:
+ - port: 5900 # VNC
+   onOpen: ignore # never prompt, never expose
+ - port: 6080 # noVNC
+   onOpen: notify
+ - port: 6901 # login server
+   onOpen: ignore # never prompt, never expose
+ - port: 5122 # char server
+   onOpen: ignore # never prompt, never expose
+ - port: 6122 # map server
+   onOpen: ignore # never prompt, never expose
+
+github:
+  prebuilds:
+    master: true
+    branches: false
+    pullRequests: false
+    addCheck: false
+    addComment: false

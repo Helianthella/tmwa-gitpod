@@ -1,0 +1,23 @@
+{
+   "folders": [
+      {
+         "path": "file:///workspace/tmwa-gitpod/.legacy/tmwa-server-data"
+      },
+      {
+         "path": "file:///workspace/tmwa-gitpod/.legacy/tmwa"
+      },
+      {
+         "path": "file:///workspace/tmwa-gitpod"
+      }
+   ],
+   "settings": {
+       "files.exclude": {
+            ".git": true,
+            ".legacy": true,
+            ".local": true,
+            "seppuku": true,
+            "ohmyzsh.sh": true,
+            ".gitpod-config": true,
+        }
+   }
+}
