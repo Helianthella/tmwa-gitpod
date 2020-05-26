@@ -1,5 +1,17 @@
 #!/bin/bash
 
+# set up git
+git config --global url.https:.pushInsteadOf git:
+
+if [[ ! -z "$GIT_AUTHOR_NAME" ]]; then
+    git config --global user.name $GIT_AUTHOR_NAME
+fi
+
+if [[ ! -z "$GIT_AUTHOR_EMAIL" ]]; then
+    git config --global user.email $GIT_AUTHOR_EMAIL
+fi
+
+
 # set up the dotfiles
 DOTFILES_OK=$(tail ~/.bashrc | grep -sc "LD_LIBRARY_PATH" || true)
 

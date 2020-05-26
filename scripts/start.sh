@@ -31,14 +31,6 @@ elif [ "${REPO_REMOTE:8:10}" = "github.com" ]; then
     export GITHUB_NAME=$(git config --get remote.origin.url | sed -r "s#.+\.com[:/]{1,2}([^/]+)/.+#\1#")
 fi
 
-if [[ ! -z "$GIT_AUTHOR_NAME" ]]; then
-    git config --global user.name $GIT_AUTHOR_NAME
-fi
-
-if [[ ! -z "$GIT_AUTHOR_EMAIL" ]]; then
-    git config --global user.email $GIT_AUTHOR_EMAIL
-fi
-
 REPO_LIST=(
     tmwa-server-data
     tmwa-client-data
